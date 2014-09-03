@@ -19,8 +19,6 @@ function ajaxFormSubmit(event) {
  
   if(event) event.preventDefault();
   thisForm = $('#' + formID);
-  console.log('ajax');
-
   register(thisForm);
 }
 
@@ -37,15 +35,10 @@ $(function () {
 
 function register($form) {
   var email = $('input', $form).val();
-  console.log('reg fct');
-
-  console.log($form.attr('method'));
-  console.log($form.attr('action'));
-  console.log($form.serialize());
 
   $.ajax({
-    type: "post",//$form.attr('method'),
-    url: "//schaumschau.us7.list-manage.com/subscribe/post-json?u=d8060e213888bbfdffd8ba6dd&amp;id=c67ae71a5e&c=?",//$form.attr('action'),
+    type: $form.attr('method'),
+    url: $form.attr('action'),
     data: $form.serialize(),
     cache       : false,
     dataType    : 'json',
@@ -84,6 +77,8 @@ $( window ).scroll(function(e) {
   var header = $('#navigation');
   var breakPoint = $('#head-block').height();
   var regButton = $('#nav-btn');
+
+  console.log('scrollTop: ' + scrollTop +' breakPoint: ' + breakPoint + ' startNavHeight: ' + startNavHeight);
 
   if (startNavHeight == 0) {
     startNavHeight = header.height();
