@@ -1,3 +1,30 @@
+var formID;
+$( document).ready(function () {
+  console.log('ready');
+  $('#subscribe_de').submit(function(event) {
+    console.log('form submit');
+    event.preventDefault();
+    ajaxFormSubmit(event);
+  });
+
+  $('#submit-email-btn').click(function(event){
+    console.log('form submit2');
+    event.preventDefault();
+    ajaxFormSubmit(event);
+  });
+});
+
+function ajaxFormSubmit(event) {
+  formID = event.target.form.id;
+ 
+  if(event) event.preventDefault();
+  thisForm = $('#' + formID);
+  console.log('ajax');
+
+  register(thisForm);
+}
+
+// needed??
 $(function () {
   var $form = $('#mc-embedded-subscribe-form');
  
@@ -10,10 +37,15 @@ $(function () {
 
 function register($form) {
   var email = $('input', $form).val();
+  console.log('reg fct');
+
+  console.log($form.attr('method'));
+  console.log($form.attr('action'));
+  console.log($form.serialize());
 
   $.ajax({
-    type: $form.attr('method'),
-    url: $form.attr('action'),
+    type: "post",//$form.attr('method'),
+    url: "//schaumschau.us7.list-manage.com/subscribe/post-json?u=d8060e213888bbfdffd8ba6dd&amp;id=c67ae71a5e&c=?",//$form.attr('action'),
     data: $form.serialize(),
     cache       : false,
     dataType    : 'json',
