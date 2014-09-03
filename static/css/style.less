@@ -1,0 +1,939 @@
+@startup-basePath: "../../../wowzl_site/startup/";
+
+@import '@{startup-basePath}flat-ui/less/variables.less';
+@import '@{startup-basePath}flat-ui/less/mixins.less';
+@import '@{startup-basePath}common-files/less/mixins.less';
+@import '@{startup-basePath}common-files/less/common.less';
+@import '@{startup-basePath}common-files/less/helper.less';
+
+@import '@{startup-basePath}ui-kit/ui-kit-header/less/header-3.less';
+// @import '@{startup-basePath}ui-kit/ui-kit-header/less/header-4.less';
+@import '@{startup-basePath}ui-kit/ui-kit-header/less/header-5.less';
+
+// @import '@{startup-basePath}ui-kit/ui-kit-header/less/header-4.less';
+// @import '@{startup-basePath}ui-kit/ui-kit-header/less/header-11.less';
+
+// @import '@{startup-basePath}ui-kit/ui-kit-content/less/content-4.less';
+// @import '@{startup-basePath}ui-kit/ui-kit-content/less/content-5.less';
+// @import '@{startup-basePath}ui-kit/ui-kit-content/less/content-8.less';
+
+@import '@{startup-basePath}ui-kit/ui-kit-content/less/content-5.less';
+@import '@{startup-basePath}ui-kit/ui-kit-content/less/content-7.less';
+@import '@{startup-basePath}ui-kit/ui-kit-content/less/content-10.less';
+@import '@{startup-basePath}ui-kit/ui-kit-content/less/content-16.less';
+@import '@{startup-basePath}ui-kit/ui-kit-content/less/content-20.less';
+@import '@{startup-basePath}ui-kit/ui-kit-content/less/content-31.less';
+// @import '@{startup-basePath}ui-kit/ui-kit-content/less/content-36.less';
+// @import '@{startup-basePath}ui-kit/ui-kit-content/less/content-37.less';
+
+@import '@{startup-basePath}ui-kit/ui-kit-projects/less/project-3.less';
+
+@import '@{startup-basePath}ui-kit/ui-kit-contacts/less/contact-4.less';
+
+@import '@{startup-basePath}ui-kit/ui-kit-footer/less/footer-2.less';
+// @import '@{startup-basePath}ui-kit/ui-kit-footer/less/footer-12.less';
+
+@import 'navbar.less';
+
+//@background-header: #4766FD;
+// @background-header: #1AACFF;
+@background-header: #3B3F45;
+@darkgrey: #080808;
+// @reg-button-color: #2ECC71;
+@reg-button-color: #00FFC6;
+
+@nav-back-color: white;
+
+@testimonial-bg-color: #7486FF;
+
+@font-family-default: 'Open Sans', sans-serif;
+
+
+// Section lengths for iPhone
+@media (max-width: 640px) {
+    #leihenundkaufen, #buy-save, #sell-earn, #security, #community, #support {
+        padding-top: 50px;
+    }
+
+    #buy-save, #sell-earn, #community {
+        padding-bottom: 50px;
+    }
+
+    .header-5-sub {
+        padding-bottom: 0px;
+    }
+}
+
+
+#navigation {
+    background-color: @nav-back-color;
+    font-family: @font-family-default;
+    height: 7%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    position: fixed:
+    bottom: 0px;
+    margin-bottom: 0px;
+
+    .navbar-header {
+        height: 53px;
+
+        color: black;
+
+        h1 {
+            font-family: @font-family-default;
+            font-size: 16px;
+            margin: 0 0 0 0;
+            padding: 17px 0 17px 0;
+        }
+    }
+
+    a {
+        color: black;
+        cursor:pointer;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    #nav-btn {
+        background-color: @reg-button-color;
+        color: black;
+        display: none;
+        font-family: @font-family-default;
+        margin-top: 8px;
+        padding: 7px 12px 7px 12px;
+    }
+    
+    @media (max-width: 640px) {
+        display:none;
+    }
+
+}
+
+.header-3 .navbar .brand {
+    font-size: 57px;
+    padding-top: 30px;
+    padding-right: 10px;
+
+    #nav-header {
+        float: left;
+    }
+
+    @media (max-width: 640px) {
+      .header-3-sub {
+        padding-top: 10px;
+      }
+    }
+
+    .pt-controls {
+        z-index: 9999;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin-top: -7px;
+        a {
+            .font(13px, white);
+            font-family: @font-family-demo;
+            letter-spacing: 1px;
+          @media(max-width:620px){
+            color: transparent;
+          }
+        }
+      @media(min-width:480px){
+        .container{
+          padding: 0 50px;
+        }
+      }
+
+    }
+
+}
+
+.content-20 {
+    background-color: @background-header;
+    height: 93%;
+    padding:0 0;
+
+
+    h3 {
+        font-family: @font-family-default;
+        font-size: 36px;
+        font-weight: 300;
+        line-height: 1.2;
+        margin-top: 50px;
+
+        @media (max-width: 640px) {
+            font-size: 24px;
+            margin-top: 16px;
+        }
+    }
+
+    #sub-heading {
+        font-family: @font-family-default;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 1.2;
+        margin-top: 35px;
+        margin-bottom: 35px;
+
+        @media (max-width: 640px) {
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+    }
+
+    .top-register-text {
+        font-family: @font-family-default;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.2;
+        margin: 30px 0 0 0;
+    }
+
+    p {
+        color: white;
+        font-family: @font-family-default;
+        font-size: 16px;
+    }
+
+    #header-container {
+        margin-top: 0px;
+        padding: 0px 0%;
+    }
+
+    #subscribe_de{
+        display: block;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
+        padding: 0px 0% 0px;
+    }
+
+    .signup-form form {
+        background-color: transparent;
+
+        #wowzl-free{
+            margin-bottom: 16px;
+        }
+        .hide-on-load{
+            display:none;
+        }
+        .form-group.pull-left {
+            margin-right: 2%;
+            width: 48%;
+        }
+        .form-group.pull-right {
+            margin-left: 2%;
+            width: 48%;
+        }
+
+        #left-btn-container, #right-btn-container{
+            @media (max-width: 480px) {
+               width: 100%;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+        .btn {
+            border-radius: 5px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        #submit-email-btn {
+            background-color: @reg-button-color;
+            //background-color: #00FFC6;
+            border: 0px;
+            color: black;//@darkgrey;
+            font-size: 16px;
+            font-weight: normal;
+            height: 45px;
+            position: static;
+        }
+
+        #more-info {
+            background: none;
+            border: 1px solid #fff; 
+            color: #fff;
+            font-size: 16px;
+            font-weight: normal;
+            height: 45px;
+            // background-color: transparent;
+            position: static;
+        }
+        input {
+            color: black @darkgrey;
+            font-family: @font-family-default;
+        }
+
+        input[type="password"], input[type="email"] {
+            border-color: #ecf0f1;
+        }
+
+        input:focus {
+            border-color: #494949 !important;
+        }
+
+        .form-error {
+            color: #FFF;
+        }
+
+        .valid{
+            border-color: #ecf0f1;
+        }
+
+        select {
+            font-size: 30px;
+        }
+
+
+
+    }
+    label {
+        color: white;
+    }
+    color: white;
+}
+
+#sign-up-btn-top {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+// #leihenundkaufen
+.content-10{
+    background-color: #72D0F4;
+    padding-top: 180px;
+    padding-bottom: 0;
+
+    .features .box {
+        padding-left: 0px;
+        margin-top: 0px;
+        border-color: white;
+    }
+
+    h3 {
+        color: #2C3E50  ;
+        font-family: @font-family-default;
+        // font-size: 45px;
+        font-size: 42px;        
+        line-height: 55px;//61px;
+        /* Es war noch nie leic: */
+        font-weight: 400;
+        margin-bottom: 10px;
+        text-align: center;
+
+        @media (max-width: 640px) {
+            font-size: 24px;
+            line-height: 28px;//61px;
+        }
+    }
+
+    .h3-sub {
+        color: #FFFFFF;
+        font-family:  @font-family-default;
+        font-size: 28px; // 30px;
+        font-weight: 300;
+        line-height: 41px;
+//        color: #999999;
+        margin-bottom: 30px;
+
+        @media (max-width: 640px) {
+            font-size: 20px;
+            line-height: 24px;//61px;
+        }
+    }
+
+    .features h6, .features p {
+        font-family: @font-family-default;
+        font-weight: 300;
+    }
+}
+
+.header-4 {
+    padding-top:300px;
+    padding-bottom:360px;
+    .background {
+        background-image: url("../img/WOWZL-MACHT-SUECHTIG-NUTZERSTIMME-LYDIA.jpg");
+        .opacity(100);
+        @media (max-width: 768px) {
+            .background-size(auto 200%);
+        }
+    }
+
+    @media (max-width: 640px) {
+        display:none;
+    }
+}
+
+#buy-save{
+    background-color: #AF7AC4;
+    padding-top: 130px;
+    padding-bottom: 180px;
+
+    @media (max-width: 640px) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .buy-header {
+        margin-bottom: 30px;
+        padding: 0;
+    }
+
+    h3 {
+        color: #FFFFFF;
+        // color: #2C3E50;
+        font-family: @font-family-default;
+        font-size: 36px;
+        // font-style: italic;
+        font-weight: 300;
+        margin-bottom: 0px;
+        text-align: left;
+
+        @media (max-width: 640px) {
+            font-size: 24px;
+            line-height: 28px;//61px;
+        }
+    }
+
+    .h3-sub {
+        color: #FFF;
+        // color: #2C3E50;
+        font-family:  @font-family-default;
+
+        // line-height: 41px;
+//        color: #999999;
+        margin-bottom: 30px;
+
+
+    }
+
+    p {
+        color: white;
+        font-size: 24px;
+        font-weight: 300;
+        margin-bottom: 30px;
+
+        @media (max-width: 640px) {
+            font-size: 20px;
+            line-height: 24px;//61px;
+        }
+
+    }
+
+    .iphone-slider-rent {
+        margin-top: 0;
+
+        #iphone-rent-frame {
+            width: 100%
+        }
+    }
+}
+
+// sell
+.content-7 {
+    background-color: #FFFED8;
+    font-family: @font-family-default;
+
+    h3 {
+        color: black;
+        font-family: @font-family-default;
+        // font-size: 45px;
+        font-size: 55px;
+        // line-height: 55px;//61px;
+        /* Es war noch nie leic: */
+        font-weight: 300;
+        text-align: center;
+
+        @media (max-width: 640px) {
+            font-size: 30px;
+            margin-bottom: 0px;
+
+        }
+
+    }
+
+    .h3-sub {
+        color: black;
+        font-family:  @font-family-default;
+        // font-size: 36px; // 30px;
+        font-weight: 300;
+        // line-height: 41px;
+//        color: #999999;
+        margin-bottom: 30px;
+    }
+
+    h6 {
+        color: black;
+        font-family: @font-family-default;
+    }
+}
+
+#security {
+    background-color: #BBC7C8;
+
+    h3 {
+        color: white;
+        font-family: @font-family-default;
+
+        @media (max-width: 640px) {
+            font-size: 26px;
+            line-height: 30px;//61px;
+        }
+
+    }
+
+    p {
+        color: white;
+        font-family: @font-family-default;
+    }
+
+    .glyphicon-euro {
+        color: #2c3e50;
+        font-size: 23px;
+        font-weight: normal;
+        position: absolute;
+        left: -45px;
+        top: 12px;
+    }
+}
+
+.content-31{
+
+    h3, h4 {
+        font-family: @font-family-default;
+    }
+
+    .row {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+
+
+// Testimonials
+.header-5 {
+    background-color: @testimonial-bg-color;
+}
+
+.header-5-sub {
+
+    background-color: @testimonial-bg-color;
+
+    #h-5-pt-1 {
+        background-color: @testimonial-bg-color;
+    }
+
+    #testimonial-headline {
+        color: #ECF0F1;
+        font-family: @font-family-default;
+        font-size: 60px;
+        font-weight: 300;
+        text-align: center;
+        padding: 60px 0 30px 0;
+        margin: 0 0 0 0;
+
+        @media (max-width: 640px) {
+            font-size: 24px;
+            line-height: 28px;//61px;
+            padding: 60px 0 0px 0;
+        }
+    }
+
+    .testimonial-box {
+        padding-top: 90px;
+    }
+    .hero-unit {
+        background-color: #ECF0F1;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .pt-page {
+        padding-top: 30px;
+
+        h3 {
+            color: black;
+            font-family: @font-family-default;
+            font-weight: 300;
+        }
+
+        h4 {
+            color: #808080;
+            font-family: @font-family-default;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        h5 {
+            color: black;
+            font-family: @font-family-default;
+            font-weight: 300;
+        }
+    }
+
+    .pt-page-1, .pt-page-2, .pt-page-3 {
+        background-color: @testimonial-bg-color;
+        padding-top: 30px;
+    }
+
+    // testimonial-nav {
+    //     color: black;
+    //     padding-top: 50px;
+    // }
+
+    .carousel-control {
+        width: 5%;
+        background-image: none;
+    }
+
+    .pt-control-next, .pt-control-prev {
+        color: black;
+    }
+
+    img {
+        max-height: 400px;
+    }
+}
+
+#community {
+    background-color: #EF6E7E;
+
+    h3 {
+        margin: 0;
+    }
+
+    p {
+        color: #ECF0F1;
+    }
+}
+
+#support {
+    #main-support {
+        color: #ECF0F1;
+        font-size: 50px;
+        margin-bottom: 20px;
+
+        @media (max-width: 640px) {
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+
+    h3 {
+
+        @media (max-width: 640px) {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+    }
+
+    h2, h3, a, p {
+        font-family: @font-family-default;
+        font-weight: 300;
+    }
+}
+
+@media (max-width: 640px) {
+
+    #to-signup-main {
+        margin-top: 10px;
+    }
+    
+    #block0 {
+        padding: 75px 0px 60px 0px;
+
+        h1 {
+            font-size: 30px /* 64px */;
+        }
+
+        #block0-to-next {
+            bottom: 10px;
+        }
+
+    }
+    #sign-up-block {
+
+        padding: 110px 0px 60px 0px;
+
+        h2 {
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 35px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .projects-3 {
+        padding: 60px 0px 60px 0px;
+        font-family:  @font-family-default;
+
+        h3 {
+            font-family:  @font-family-default;
+        }
+    }
+
+    .contacts-4 {
+        padding: 60px 0px 60px 0px;
+
+        h3, p, a {
+            font-family: @font-family-default;
+        }
+
+        // #phone {
+        //     font-size: 47px !important;
+        //     font-family: @font-family-default;
+        //     font-weight: 700;
+    }
+}
+
+
+
+#phone {
+    font-size: 47px;
+    font-family: @font-family-default;
+    font-weight: 700;
+
+
+    @media (max-width: 640px) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+.sign-up-btn {
+    background-color: #EE3F46;
+}
+
+#block0, #block1 {
+    .features {
+        h6 {
+            margin: 0 0 13px;
+            .font(24px, @base);
+            font-family: @font-family-default;
+            font-weight: 300;
+            text-transform: none;
+            line-height: 1.3;
+
+        }
+        p {
+            .font(16px);
+            letter-spacing: 0.7;
+
+        }
+        >[class*="col-sm-"] {
+            position: relative;
+            padding-top: 180px;
+            padding-bottom: 50px;
+            > img:first-child {
+                position: absolute;
+                left: 15px;
+                top: 30px;
+            }
+        }
+        &:last-child >[class*="col-sm-"], &.last >[class*="col-sm-"] {
+            padding-bottom: 0;
+        }
+        @media (max-width: 767px) {
+            >[class*="col-sm-"], &:last-child >[class*="col-sm-"], &.last >[class*="col-sm-"] {
+                padding-top: 150px;
+                padding-bottom: 20px;
+            }
+            &:last-child, &.last {
+                >[class*="col-sm-"]:last-child, >[class*="col-sm-"].last {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+    .control-btn {
+            width: 53px;
+            height: 53px;
+            .line-height(53px);
+            margin: 0;
+            padding: 0;
+            border-radius: 50%;
+            text-align: center;
+            .font(18px, @gray-light);
+            background: @clouds;
+            &:hover, &:focus {
+                color: @gray-light;
+                background: @base;
+            }
+            &:active {
+                color: white;
+            }
+            // color: #2c3e50;
+            background: #2c3e50;
+            position: absolute;
+            left: 50%;
+            bottom: 130px;
+            margin-left: -26.5px;
+        }
+}
+
+.content-16 {
+    h2, h3 {
+        margin-bottom: 30px;
+    }
+}
+
+.control-btn {
+        width: 53px;
+        height: 53px;
+        .line-height(53px);
+        margin: 0;
+        padding: 0;
+        border-radius: 50%;
+        text-align: center;
+        .font(18px, @gray-light);
+        background: @clouds;
+        &:hover, &:focus {
+            color: white;
+            background: @base;
+        }
+        &:active {
+            color: @gray-light;
+        }
+        position: absolute;
+        left: 50%;
+        bottom: 130px;
+        margin-left: -26.5px;
+    }
+
+
+.text-right {
+    h1, h2, h3, p, .lead {
+        text-align: right;
+        font-family: @font-family-default;
+    }
+}
+
+.text-center {
+    h1, h2, h3, p, .lead{
+        text-align: center;
+        font-family: @font-family-default;
+    }
+}
+
+.text-left {
+    h1, h2, h3, p, .lead{
+        text-align: left;
+        font-family: @font-family-default;
+    }
+}
+
+.footer-2 {
+    line-height: 1.4;
+}
+
+
+
+/**
+ * iPhone slider
+ */
+
+.iphone-slider {
+  position: relative;
+
+    @media (max-width: 640px) {
+        margin: 10px 0 20px 0;
+    }
+}
+
+.iphone-slider .canvas {
+  position: absolute;
+  overflow: hidden;
+  width: 87%;
+  height: 73.4%;
+  left: 7%;
+  top: 14%;
+  z-index: -1;
+}
+.iphone-slider .frame {
+}
+.iphone-slider .slide {
+  position: absolute;
+  width: 100%;
+  -webkit-transition: all .6s ease-in;
+     -moz-transition: all .6s ease-in;
+      -ms-transition: all .6s ease-in;
+       -o-transition: all .6s ease-in;
+          transition: all .6s ease-in;
+}
+.iphone-slider .stamp {
+  position: absolute;
+  top: 18%;
+  opacity: 0;
+  -webkit-transition: opacity .25s ease;
+     -moz-transition: opacity .25s ease;
+      -ms-transition: opacity .25s ease;
+       -o-transition: opacity .25s ease;
+          transition: opacity .25s ease;
+}
+.iphone-slider .stamp-hot {
+  width: 80%;
+  left:6%;
+  -webkit-transform: rotate(-12deg);
+     -moz-transform: rotate(-12deg);
+      -ms-transform: rotate(-12deg);
+       -o-transform: rotate(-12deg);
+          transform: rotate(-12deg);
+}
+.iphone-slider .stamp-not {
+  width: 50%;
+  right:6%;
+  -webkit-transform: rotate(12deg);
+     -moz-transform: rotate(12deg);
+      -ms-transform: rotate(12deg);
+       -o-transform: rotate(12deg);
+          transform: rotate(12deg);
+}
+.iphone-slider .swipe-left {
+  -webkit-transform: rotate(-7deg) translate(-112%, 6%);
+     -moz-transform: rotate(-7deg) translate(-112%, 6%);
+      -ms-transform: rotate(-7deg) translate(-112%, 6%);
+       -o-transform: rotate(-7deg) translate(-112%, 6%);
+          transform: rotate(-7deg) translate(-112%, 6%);
+}
+.swipe-left .stamp-not {
+  opacity: 1;
+}
+.swipe-right .stamp-hot {
+  opacity: 1;
+}
+.iphone-slider .swipe-right {
+  -webkit-transform: rotate(7deg) translate(112%, 6%);
+     -moz-transform: rotate(7deg) translate(112%, 6%);
+      -ms-transform: rotate(7deg) translate(112%, 6%);
+       -o-transform: rotate(7deg) translate(112%, 6%);
+          transform: rotate(7deg) translate(112%, 6%);
+}
+
+/*
+* Rent Carousel
+*/
+.iphone-slider-rent {
+  padding-top: 50px;
+  position: relative;
+}
+
+.iphone-slider-rent .canvas-rent {
+  padding-top: 40px;
+  position: absolute;
+  overflow: hidden;
+  width: 87%;
+  height: 73.4%;
+  left: 7%;
+  top: 14%;
+  z-index: -1;
+}
+
+.iphone-slider-rent .canvas-rent .carousel{
+  margin-top: 0px;
+}
