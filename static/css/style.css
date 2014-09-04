@@ -2651,6 +2651,9 @@ body > .navbar-collapse .navbar-form .btn-primary:hover,
 body > .navbar-collapse .navbar-search .btn-primary:hover {
   color: #fff;
 }
+.de {
+  display: none;
+}
 @media (max-width: 640px) {
   #leihenundkaufen,
   #buy-save,
@@ -2795,7 +2798,8 @@ body > .navbar-collapse .navbar-search .btn-primary:hover {
   margin-top: 0px;
   padding: 0px 0%;
 }
-.content-20 #subscribe_de {
+.content-20 #subscribe_de,
+.content-20 #subscribe_en {
   display: block;
   margin-top: 0px;
   margin-right: 0px;
@@ -2832,7 +2836,8 @@ body > .navbar-collapse .navbar-search .btn-primary:hover {
   border-radius: 5px;
   font-family: 'Open Sans', sans-serif;
 }
-.content-20 .signup-form form #submit-email-btn {
+.content-20 .signup-form form #submit-email-btn_de,
+.content-20 .signup-form form #submit-email-btn_en {
   background-color: #00ffc6;
   border: 0px;
   color: black;

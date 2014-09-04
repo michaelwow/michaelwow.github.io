@@ -48,6 +48,11 @@
 
 @font-family-default: 'Open Sans', sans-serif;
 
+// show only de on load
+.de {
+    display: none;
+}
+
 
 // Section lengths for iPhone
 @media (max-width: 640px) {
@@ -202,7 +207,7 @@
         padding: 0px 0%;
     }
 
-    #subscribe_de{
+    #subscribe_de, #subscribe_en{
         display: block;
         margin-top: 0px;
         margin-right: 0px;
@@ -242,7 +247,7 @@
             font-family: 'Open Sans', sans-serif;
         }
 
-        #submit-email-btn {
+        #submit-email-btn_de, #submit-email-btn_en{
             background-color: @reg-button-color;
             //background-color: #00FFC6;
             border: 0px;

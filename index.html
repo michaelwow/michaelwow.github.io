@@ -86,10 +86,10 @@
 
                     </div>
                     <div id="profile-form" class="signup-form">
-                        <form name="subscribe" class="clearfix subscribe_de" id="subscribe_de" action="//schaumschau.us7.list-manage.com/subscribe/post-json?u=d8060e213888bbfdffd8ba6dd&amp;id=c67ae71a5e&c=?" method="post" target="_blank">
+                        <form name="subscribe_de" class="clearfix subscribe de" id="subscribe_de" action="//schaumschau.us7.list-manage.com/subscribe/post-json?u=d8060e213888bbfdffd8ba6dd&amp;id=c67ae71a5e&c=?" method="post" target="_blank">
 
                         <!-- <form id="email-form" class="clearfix"> -->
-                            <p class="top-register-text" id="wowzl-free">Wowzl startet bald. Jetzt registrieren und Einladung sichern.</p>
+                            <p class="top-register-text" id="wowzl-free">Hinterlasse einfach Deine E-Mail-Adresse und erhalte eine Einladung zum kostenlosen Probetag.</p>
                             <div class="form-group">
                                  <input type="email" id="email-field" class="form-control"  name="EMAIL"  placeholder="E-Mail-Adresse" spellcheck="false" data-validation="required email" data-validation-error-msg="Bitte gib eine korrekte E-Mail-Addresse ein" method="post" >
                                 <!-- <span class="input-icon fui-check-inverted"></span> -->
@@ -102,11 +102,33 @@
                                     <button class="btn" id="submit-email-btn_de" type="submit" >Registrieren</button>
                                 </div>
                                 <div class="form-group pull-right" id="right-btn-container">
-                                    <button class="btn" id="more-info" type="button" onclick="scrollToElem('#leihenundkaufen');">Wie es funktioniert</button>
+                                    <button class="btn" id="more-info" type="button" onclick="scrollToElem('#leihenundkaufen');">Mehr Informationen</button>
                                 </div>
                                 </div>
                             <div id="alert-harbor"></div>
                         </form>
+
+                        <form name="subscribe_en" class="clearfix subscribe en" id="subscribe_en" action="//schaumschau.us7.list-manage.com/subscribe/post-json?u=d8060e213888bbfdffd8ba6dd&amp;id=c67ae71a5e&c=?" method="post" target="_blank">
+
+                        <!-- <form id="email-form" class="clearfix"> -->
+                            <p class="top-register-text" id="wowzl-free">Just leave your email and we´ll send you an invitation for your free trial day. </p>
+                            <div class="form-group">
+                                 <input type="email" id="email-field" class="form-control"  name="EMAIL"  placeholder="Your eMail..." spellcheck="false" data-validation="required email" data-validation-error-msg="Bitte gib eine korrekte E-Mail-Addresse ein" method="post" >
+                                <!-- <span class="input-icon fui-check-inverted"></span> -->
+
+                            </div>
+
+                            <!-- <button class="btn" id="submit-email-btn" type="submit" >Registrieren</button> -->
+                            <div class="clearfix" id="form-buttons">
+                                <div class="form-group pull-left" id="left-btn-container">
+                                    <button class="btn" id="submit-email-btn_en" type="submit" >Register</button>
+                                </div>
+                                <div class="form-group pull-right" id="right-btn-container">
+                                    <button class="btn" id="more-info" type="button" onclick="scrollToElem('#leihenundkaufen');">More Info</button>
+                                </div>
+                                </div>
+                            <div id="alert-harbor"></div>
+                        </form>                        
                     </div>
                 </div>
             </div>
@@ -126,7 +148,7 @@
       <!-- <a class="navbar-brand" href=" ">Wowzl</a> -->
       <!-- <h1><a href="">Wowzl</a></h1> -->
     </div>
-    <nav role="navigation" class="navbar-collapse bs-navbar-collapse collapse" style="height: 1px;">
+    <nav role="navigation" class="navbar-collapse bs-navbar-collapse collapse de" style="height: 1px;">
       <ul class="nav navbar-nav">
         <li>
           <a onclick='scrollToElem("#leihenundkaufen")'>Mode Ausleihen</a>
@@ -140,9 +162,12 @@
         <li>
           <a onclick='scrollToElem("#security")'>Sicherheit</a>
         </li>
-        <li>
-          <a onclick='scrollToElem("#community")'>Community</a>
+        <li class='en'>
+          <a onclick='showDe()'>German</a>
         </li>
+        <li class='de'>
+          <a onclick='showEn()'>English</a>
+        </li>        
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <!-- <li><a onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');" href="http://expo.getbootstrap.com">Expo</a></li> -->
