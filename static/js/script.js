@@ -1,5 +1,8 @@
 var formID;
 $( document).ready(function () {
+  // Show only german on load
+  showDe();
+
   console.log('ready');
   $('#subscribe_de').submit(function(event) {
     console.log('form submit');
@@ -8,7 +11,19 @@ $( document).ready(function () {
   });
 
   $('#submit-email-btn_de').click(function(event){
-    console.log('form submit2');
+    console.log('form submit de');
+    event.preventDefault();
+    ajaxFormSubmit(event);
+  });
+
+  $('#subscribe_en').submit(function(event) {
+    console.log('form submit');
+    event.preventDefault();
+    ajaxFormSubmit(event);
+  });
+
+  $('#submit-email-btn_en').click(function(event){
+    console.log('form submit en');
     event.preventDefault();
     ajaxFormSubmit(event);
   });
@@ -66,8 +81,11 @@ function register($form) {
   });
 }
 
-function scrollToBlock(number){
-  scrollToElem('#block' + number);
+function scrollToElem(elemId){
+  $.scrollTo($(elemId), {
+      axis : 'y',
+      duration : 1500
+  });
 }
 
 // nav bar animation
@@ -100,3 +118,16 @@ $( window ).scroll(function(e) {
     // header.css('position', 'relative').css('top', 0).css('height','5%');
   }
 });
+
+function showDe(){
+  console.log('show de');
+  $('.en').hide();
+  $('.de').show();
+}
+
+function showEn(){
+  console.log('show en');
+  $('.en').show();
+  $('.de').hide();
+
+}
