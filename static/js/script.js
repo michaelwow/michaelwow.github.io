@@ -7,7 +7,7 @@ $( document).ready(function () {
     ajaxFormSubmit(event);
   });
 
-  $('#submit-email-btn').click(function(event){
+  $('#submit-email-btn_de').click(function(event){
     console.log('form submit2');
     event.preventDefault();
     ajaxFormSubmit(event);
@@ -77,8 +77,6 @@ $( window ).scroll(function(e) {
   var header = $('#navigation');
   var breakPoint = $('#head-block').height();
   var regButton = $('#nav-btn');
-
-  console.log('scrollTop: ' + scrollTop +' breakPoint: ' + breakPoint + ' startNavHeight: ' + startNavHeight);
 
   if (startNavHeight == 0) {
     startNavHeight = header.height();
